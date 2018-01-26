@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "AutoPixie",
-  "description": "DOM automation. Set custom scripts to the push of a button",
+  "description": "DOM automation. Set custom scripts to the push of a button!",
   "version": "1.0.0",
   "background" : {
     "scripts" : ["background.js"]

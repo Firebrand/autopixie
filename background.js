@@ -26,6 +26,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 chrome.tabs.onUpdated.addListener(function(tabId,changeInfo,tab){
     if (autopixie_status===true){
-      chrome.tabs.executeScript(tabId, {file: "program.js"} );
+      chrome.tabs.executeScript(tabId, {file: "rundust.js"} );
     }
 });
