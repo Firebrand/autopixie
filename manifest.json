@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "AutoPixie",
   "description": "DOM automation. Set custom persistent scripts to the push of a button! By Alex Tsirozidis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "background" : {
     "scripts" : ["background.js"]
   },
