@@ -1,11 +1,9 @@
 (function () {
 
 
-        const field = document.body.querySelector(".top-bar");
-
-        field.style.display = 'none';
-
-
+    chrome.storage.local.get('pixiescript', ret => {
+        eval(ret.pixiescript);
+    });
 
 
 }());

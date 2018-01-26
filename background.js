@@ -13,6 +13,14 @@ chrome.browserAction.onClicked.addListener(function(tab) {
         chrome.browserAction.setIcon({path: 'icon-16-bw.png'});
     }
 
+    chrome.tabs.executeScript(null, {
+        code: `var autopixie_status = ${autopixie_status};`
+      }, () => {
+        chrome.tabs.executeScript(null, {
+          file: "pixiedust.js"
+        })
+    });
+
  });
 
 
