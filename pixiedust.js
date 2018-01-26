@@ -1,21 +1,30 @@
 (function (autopixie_status) {
 
-    const pixieDust = document.body.querySelector("#pixiedust");
+    var windowUrl = window.location.href;
 
-    if (pixieDust !== null) {
+    var magicPage = windowUrl.includes("pixiedust.html");
+
+
+    if (magicPage === true) {
       
+ 
+
         if (autopixie_status===true) {
+            var textarea = document.createElement("textarea");
+
             chrome.storage.local.get('pixiescript', ret => {
-                pixieDust.value = ret.pixiescript;
-                pixieDust.setAttribute("style","background-color:#FFFFE7; width: 80%; height:80%");
+                textarea.value = ret.pixiescript;
+                textarea.id = "pixiedustarea";
+                textarea.setAttribute("style","background-color:#FFFFE7; width: 80%; height:80%");
+                document.body.appendChild(textarea);
                 alert ("See my pixie dust!");
             });
         } else {
+            var textarea = document.body.querySelector("#pixiedustarea");
             chrome.storage.local.set({
-                'pixiescript': pixieDust.value
+                'pixiescript': textarea.value
               });
-              pixieDust.value='';
-              pixieDust.setAttribute("style","background-color:white; width: 20%; height:20%");
+              document.body.removeChild(textarea);
               alert ("Thanks for the new pixie dust!");
         }
 
