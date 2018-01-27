@@ -4,6 +4,7 @@
 
     var magicPage = windowUrl.includes("pixiedust.html");
 
+  
 
     if (magicPage === true) {
       
@@ -29,7 +30,7 @@
         }
 
     } else {
-        location.href = location.href;
+        location.reload(false);
     }
 
 
